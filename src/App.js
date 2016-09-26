@@ -5,9 +5,7 @@ import './App.css';
 import TextInput from './components/TextInput'
 import Button from './components/Button'
 import LikeButton from './components/LikeButton'
-import Avatar from './components/Avatar'
-import BelleComponents from './components/BelleComponents'
-//import EssenceComponents from './components/EssenceComponents'
+import LoopbackList from './components/LoopbackList'
 
 class App extends Component {
   render() {
@@ -20,11 +18,10 @@ class App extends Component {
         <p className="App-intro">
           Bora la começar com isto nharr <code>src/App.js</code> and save to reload.
         </p>
-        <div><BelleComponents/></div>
         <div><Button/></div>
         <div><TextInput/></div>
         <div><LikeButton/></div>
-        <div><Avatar/></div>
+         <div><LoopbackList/></div>
       </div>
     );
   }
