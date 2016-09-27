@@ -5,7 +5,8 @@ import './App.css';
 import TextInput from './components/TextInput'
 import Button from './components/Button'
 import LikeButton from './components/LikeButton'
-import LoopbackList from './components/LoopbackList'
+import APIList from './components/APIList'
+import Bootstrpjumbo from './components/Bootstrpjumbo'
 
 class App extends Component {
   render() {
@@ -21,8 +22,10 @@ class App extends Component {
         <div><Button/></div>
         <div><TextInput/></div>
         <div><LikeButton/></div>
-         <div><LoopbackList/></div>
+        <div><Bootstrpjumbo/></div>
+        <div><APIList/></div>
       </div>
+              
     );
   }
 }
