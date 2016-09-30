@@ -5,8 +5,8 @@ import './App.css';
 import TextInput from './components/TextInput'
 import Button from './components/Button'
 import LikeButton from './components/LikeButton'
-import APIList from './components/APIList'
 import Bootstrpjumbo from './components/Bootstrpjumbo'
+import DecisionList from './components/DecisionList'
 
 class App extends Component {
   render() {
@@ -23,7 +23,8 @@ class App extends Component {
         <div><TextInput/></div>
         <div><LikeButton/></div>
         <div><Bootstrpjumbo/></div>
-        <div><APIList/></div>
+        
+        <div><DecisionList/></div>
       </div>
               
     );
