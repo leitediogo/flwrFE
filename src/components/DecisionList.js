@@ -18,8 +18,9 @@ class DecisionList extends Component {
   */
 
   componentDidMount() {
-    //testInvokeAPISuperagent('http://localhost:3000/api/Decisions');
-    //var aaa = Promise.utils.getDecisions();
+    utils.testInvokeAPISuperagent('http://localhost:3000/api/Decisions');
+   var list=utils.testGetList('some param');
+   console.log (list);
     
     //console.log('componentDidMount: ' + aaa);
   }

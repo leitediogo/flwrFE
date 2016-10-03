@@ -32,6 +32,11 @@ var utils = {
         })
         console.log('2: ' + result);
         return result;
+    },
+    testGetList: function(parameter){
+        var result = ['One', 'Two', parameter];
+        return result;
+
     }
 };
 

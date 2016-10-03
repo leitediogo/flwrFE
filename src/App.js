@@ -23,7 +23,6 @@ class App extends Component {
         <div><TextInput/></div>
         <div><LikeButton/></div>
         <div><Bootstrpjumbo/></div>
-        
         <div><DecisionList/></div>
       </div>
               
