@@ -1,42 +1,42 @@
-import Superagent from 'superagent';
 
-var utils = {
+let list = [
+    { name: 'name1', category: 'cat1'},
+    { name: 'name2', category: 'cat1'},
+    { name: 'name3', category: 'cat2'},
+    { name: 'name4', category: 'cat2'},
+    { name: 'name5', category: 'cat1'}
+    ]
+
+//list filter test old school
+let cat1OS = []
+for (var i = 0; i < list.length; i++){
+    cat1OS.push(list[i].name)
+}
+
+//list filter test functional
+let cat1 = list.filter(function(list){
+    return list.category === 'cat1'
+})
+
+//list map test functional
+let names = list.map (function(list){
+    return list.name + ' pertence a ' + list.category
+})
+
+//list reduce test functional
+let concatenateName = list.reduce (function (conc, list){
+    return conc + list.name
+})
+
+let utils = {
     generateRandom: function () {
         return Math.random();
     },
     sum: function (a, b) {
         return a + b;
     },
-    testInvokeAPISuperagent: function (endpoint) {
-        Superagent
-            .get(endpoint)
-            .accept('json')
-            .end(function (err, res) {
-                if (err) {
-                    console.log('testInvokeAPISuperagent error: ' + err);
-                    throw err;
-                }
-                var jsonResult = JSON.stringify(res.body);
-                console.log('testInvokeAPISuperagent success: ' + jsonResult);
-            });
-        return null;
-    },
-    getDecisions: function () {
-        var result = 'init';
-        Superagent.get('http://localhost:3000/api/Decisions').accept('json').then(function (err, res) {
-            if (err) {
-                throw err;
-            }
-            result = JSON.stringify(res.body);
-            console.log('1: ' + result);
-        })
-        console.log('2: ' + result);
-        return result;
-    },
-    testGetList: function(parameter){
-        var result = ['One', 'Two', parameter];
-        return result;
-
+    getList: function(){
+        return cat1OS;
     }
 };
 

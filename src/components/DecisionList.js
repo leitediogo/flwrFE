@@ -1,6 +1,6 @@
 import React from 'react'
 import { Component } from 'react'
-import utils from '../utils/Utils'
+import apiutils from '../utils/APIUtils'
 
 class DecisionList extends Component {
   //this is getInitialState
@@ -18,10 +18,7 @@ class DecisionList extends Component {
   */
 
   componentDidMount() {
-    utils.testInvokeAPISuperagent('http://localhost:3000/api/Decisions');
-   var list=utils.testGetList('some param');
-   console.log (list);
-    
+    apiutils.testInvokeAPISuperagent('http://localhost:3000/api/Decisions'); 
     //console.log('componentDidMount: ' + aaa);
   }
 /*

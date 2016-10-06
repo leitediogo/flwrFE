@@ -7,6 +7,7 @@ import Button from './components/Button'
 import LikeButton from './components/LikeButton'
 import Bootstrpjumbo from './components/Bootstrpjumbo'
 import DecisionList from './components/DecisionList'
+import List from './components/List'
 
 class App extends Component {
   render() {
@@ -24,6 +25,7 @@ class App extends Component {
         <div><LikeButton/></div>
         <div><Bootstrpjumbo/></div>
         <div><DecisionList/></div>
+        <div><List/></div>
       </div>
               
     );
