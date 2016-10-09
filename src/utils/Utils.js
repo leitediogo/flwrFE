@@ -1,3 +1,4 @@
+import Superagent from 'superagent'
 
 let list = [
     { name: 'name1', category: 'cat1'},
@@ -7,37 +8,29 @@ let list = [
     { name: 'name5', category: 'cat1'}
     ]
 
-//list filter test old school
-let cat1OS = []
-for (var i = 0; i < list.length; i++){
-    cat1OS.push(list[i].name)
-}
-
 //list filter test functional
 let cat1 = list.filter(function(list){
-    return list.category === 'cat1'
+    return list.category === 'cat2'
 })
 
-//list map test functional
-let names = list.map (function(list){
-    return list.name + ' pertence a ' + list.category
-})
-
-//list reduce test functional
-let concatenateName = list.reduce (function (conc, list){
-    return conc + list.name
-})
+//Get decisions
+let apiGet = Superagent.get ('https://jsonplaceholder.typicode.com/posts')
+                    .accept('json')
+                    .end(function (err,res){
+                        if (err){
+                            console.log('decisions error')
+                        }
+                        return res.boby;
+                    })
 
 let utils = {
-    generateRandom: function () {
-        return Math.random();
+    getList: function () {
+        return cat1;
     },
-    sum: function (a, b) {
-        return a + b;
-    },
-    getList: function(){
-        return cat1OS;
+    getAPIList: function(){
+        return apiGet;
     }
 };
+
 
 export default utils;

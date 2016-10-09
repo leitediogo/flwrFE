@@ -8,6 +8,7 @@ import LikeButton from './components/LikeButton'
 import Bootstrpjumbo from './components/Bootstrpjumbo'
 import DecisionList from './components/DecisionList'
 import List from './components/List'
+import MaterialUITest from './components/MaterialUITest'
 
 class App extends Component {
   render() {
@@ -26,6 +27,7 @@ class App extends Component {
         <div><Bootstrpjumbo/></div>
         <div><DecisionList/></div>
         <div><List/></div>
+        <div><MaterialUITest/></div>
       </div>
               
     );

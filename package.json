@@ -7,8 +7,10 @@
   },
   "dependencies": {
     "belle": "^2.0.7",
+    "material-ui": "^0.16.0",
     "react": "^15.3.1",
     "react-dom": "^15.3.1",
+    "react-tap-event-plugin": "^1.0.0",
     "superagent": "^2.2.0"
   },
   "scripts": {

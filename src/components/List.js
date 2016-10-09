@@ -3,11 +3,18 @@ import {Component} from 'react'
 import utils from '../utils/Utils'
 
  class List extends Component {
-     componentDidMount (){
+    constructor() {
+    super();
+    this.state = { decisionList: 'Init' };
+    console.log("List :: constructor " + this.state.decisionList);
+  }
+
+    componentDidMount (){
          console.log ('List :: componentDidMount');
-         console.log (utils.sum(1,6));
-         console.log (utils.getList());
-     }
+         console.log(utils.getList());
+         console.log(utils.getAPIList());
+    }
+
      render (){
         return (
             <div>list component</div>
