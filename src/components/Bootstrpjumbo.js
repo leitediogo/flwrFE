@@ -6,8 +6,8 @@ class Bootstrpjumbo extends Component {
     render (){
         return (
             <div className="container jumbotron">
-                <h2> bootstrap jumbotron component </h2>
-                <p> for testing purposes </p>
+                <h2> Bootstrap jumbotron component </h2>
+                <p> for testing use of bootstrap </p>
             </div>
         )
     }
