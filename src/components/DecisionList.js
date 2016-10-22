@@ -14,8 +14,10 @@ class DecisionList extends Component {
     let decisionNamesList = [];
     agent.get('http://localhost:3000/api/Decisions').then(function onResult(res) {
       decisionList = res.body;
-      for (var i = 0; i < decisionList.length; i++) {
-        decisionNamesList.push(decisionList[i].name);
+      if (decisionList != null) {
+        for (var i = 0; i < decisionList.length; i++) {
+          decisionNamesList.push(decisionList[i].name);
+        }
       }
       this.setState({ decisionNames: decisionNamesList, decisions: decisionList });
     }.bind(this));
@@ -25,7 +27,7 @@ class DecisionList extends Component {
     return (
       <div>
         <div> Decision Names List: {this.state.decisionNames} </div>
-        <div>Decisions List: {JSON.stringify(this.state.decisions)} </div>
+        <div>Decisions List: {JSON.stringify(this.state.decisions) } </div>
       </div>
     );
   }
