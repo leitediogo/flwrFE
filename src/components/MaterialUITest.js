@@ -22,9 +22,6 @@ import IconMenu from 'material-ui/IconMenu';
 import MenuItem from 'material-ui/MenuItem';
 import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
 
-// Needed for onTouchTap
-import injectTapEventPlugin from 'react-tap-event-plugin';
-injectTapEventPlugin();
 
 let style = {
     margin: 12,
@@ -33,11 +30,11 @@ let style = {
 }
 
 const Paperstyle = {
-  height: 100,
-  width: 100,
-  margin: 20,
-  textAlign: 'center',
-  display: 'inline-block',
+    height: 100,
+    width: 100,
+    margin: 20,
+    textAlign: 'center',
+    display: 'inline-block',
 };
 
 class MaterialUITest extends Component {
@@ -113,66 +110,66 @@ class MaterialUITest extends Component {
                         <Divider />
                     </Paper>
                     <div>
-    <IconMenu
-      iconButtonElement={<IconButton><MoreVertIcon /></IconButton>}
-      anchorOrigin={{horizontal: 'left', vertical: 'top'}}
-      targetOrigin={{horizontal: 'left', vertical: 'top'}}
-    >
-      <MenuItem primaryText="Refresh" />
-      <MenuItem primaryText="Send feedback" />
-      <MenuItem primaryText="Settings" />
-      <MenuItem primaryText="Help" />
-      <MenuItem primaryText="Sign out" />
-    </IconMenu>
-    <IconMenu
-      iconButtonElement={<IconButton><MoreVertIcon /></IconButton>}
-      anchorOrigin={{horizontal: 'left', vertical: 'bottom'}}
-      targetOrigin={{horizontal: 'left', vertical: 'bottom'}}
-    >
-      <MenuItem primaryText="Refresh" />
-      <MenuItem primaryText="Send feedback" />
-      <MenuItem primaryText="Settings" />
-      <MenuItem primaryText="Help" />
-      <MenuItem primaryText="Sign out" />
-    </IconMenu>
-    <IconMenu
-      iconButtonElement={<IconButton><MoreVertIcon /></IconButton>}
-      anchorOrigin={{horizontal: 'right', vertical: 'bottom'}}
-      targetOrigin={{horizontal: 'right', vertical: 'bottom'}}
-    >
-      <MenuItem primaryText="Refresh" />
-      <MenuItem primaryText="Send feedback" />
-      <MenuItem primaryText="Settings" />
-      <MenuItem primaryText="Help" />
-      <MenuItem primaryText="Sign out" />
-    </IconMenu>
-    <IconMenu
-      iconButtonElement={<IconButton><MoreVertIcon /></IconButton>}
-      anchorOrigin={{horizontal: 'right', vertical: 'top'}}
-      targetOrigin={{horizontal: 'right', vertical: 'top'}}
-    >
-      <MenuItem primaryText="Refresh" />
-      <MenuItem primaryText="Send feedback" />
-      <MenuItem primaryText="Settings" />
-      <MenuItem primaryText="Help" />
-      <MenuItem primaryText="Sign out" />
-    </IconMenu>
-  </div>
+                        <IconMenu
+                            iconButtonElement={<IconButton><MoreVertIcon /></IconButton>}
+                            anchorOrigin={{ horizontal: 'left', vertical: 'top' }}
+                            targetOrigin={{ horizontal: 'left', vertical: 'top' }}
+                            >
+                            <MenuItem primaryText="Refresh" />
+                            <MenuItem primaryText="Send feedback" />
+                            <MenuItem primaryText="Settings" />
+                            <MenuItem primaryText="Help" />
+                            <MenuItem primaryText="Sign out" />
+                        </IconMenu>
+                        <IconMenu
+                            iconButtonElement={<IconButton><MoreVertIcon /></IconButton>}
+                            anchorOrigin={{ horizontal: 'left', vertical: 'bottom' }}
+                            targetOrigin={{ horizontal: 'left', vertical: 'bottom' }}
+                            >
+                            <MenuItem primaryText="Refresh" />
+                            <MenuItem primaryText="Send feedback" />
+                            <MenuItem primaryText="Settings" />
+                            <MenuItem primaryText="Help" />
+                            <MenuItem primaryText="Sign out" />
+                        </IconMenu>
+                        <IconMenu
+                            iconButtonElement={<IconButton><MoreVertIcon /></IconButton>}
+                            anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
+                            targetOrigin={{ horizontal: 'right', vertical: 'bottom' }}
+                            >
+                            <MenuItem primaryText="Refresh" />
+                            <MenuItem primaryText="Send feedback" />
+                            <MenuItem primaryText="Settings" />
+                            <MenuItem primaryText="Help" />
+                            <MenuItem primaryText="Sign out" />
+                        </IconMenu>
+                        <IconMenu
+                            iconButtonElement={<IconButton><MoreVertIcon /></IconButton>}
+                            anchorOrigin={{ horizontal: 'right', vertical: 'top' }}
+                            targetOrigin={{ horizontal: 'right', vertical: 'top' }}
+                            >
+                            <MenuItem primaryText="Refresh" />
+                            <MenuItem primaryText="Send feedback" />
+                            <MenuItem primaryText="Settings" />
+                            <MenuItem primaryText="Help" />
+                            <MenuItem primaryText="Sign out" />
+                        </IconMenu>
+                    </div>
 
-  <div>
-    <Paper style={Paperstyle} zDepth={1} rounded={false} />
-    <Paper style={Paperstyle} zDepth={2} rounded={false} />
-    <Paper style={Paperstyle} zDepth={3} rounded={false} />
-    <Paper style={Paperstyle} zDepth={4} rounded={false} />
-    <Paper style={Paperstyle} zDepth={5} rounded={false} />
-  </div>
-  <div>
-    <Paper style={Paperstyle} zDepth={1} circle={true} />
-    <Paper style={Paperstyle} zDepth={2} circle={true} />
-    <Paper style={Paperstyle} zDepth={3} circle={true} />
-    <Paper style={Paperstyle} zDepth={4} circle={true} />
-    <Paper style={Paperstyle} zDepth={5} circle={true} />
-  </div>
+                    <div>
+                        <Paper style={Paperstyle} zDepth={1} rounded={false} />
+                        <Paper style={Paperstyle} zDepth={2} rounded={false} />
+                        <Paper style={Paperstyle} zDepth={3} rounded={false} />
+                        <Paper style={Paperstyle} zDepth={4} rounded={false} />
+                        <Paper style={Paperstyle} zDepth={5} rounded={false} />
+                    </div>
+                    <div>
+                        <Paper style={Paperstyle} zDepth={1} circle={true} />
+                        <Paper style={Paperstyle} zDepth={2} circle={true} />
+                        <Paper style={Paperstyle} zDepth={3} circle={true} />
+                        <Paper style={Paperstyle} zDepth={4} circle={true} />
+                        <Paper style={Paperstyle} zDepth={5} circle={true} />
+                    </div>
 
                     <div>
                         <FlatButton label="Default" />
