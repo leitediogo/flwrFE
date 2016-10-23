@@ -1,10 +1,10 @@
 import React from 'react'
 import { Component } from 'react'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import { Card, CardActions, CardHeader, CardMedia, CardTitle, CardText } from 'material-ui/Card';
+import { Card, CardActions, CardHeader, CardTitle, CardText } from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
 
-import tiger from '../images/tiger.jpg';
+//import tiger from '../images/tiger.jpg';
 import avatar from '../images/avatar.jpg'
 
 class DecisionCardList extends Component {
@@ -12,19 +12,18 @@ class DecisionCardList extends Component {
         super()
         this.state = { decision: '', decisionList: [] }
     }
-
     render() {
         return (
-            <MuiThemeProvider>
+            <MuiThemeProvider>    
                 <div>
                     <Card>
-                        <CardHeader title="Created By" subtitle = "Diogo Leite" avatar={avatar} />
+                        <CardHeader title="Created By" subtitle="Diogo Leite" avatar={avatar} />
                         <CardTitle title="Decision One" subtitle="Decision One Subtitle" />
                         <CardText>Decision One detailed text for visual purposes</CardText>
                         <CardActions> <FlatButton label="Edit" /><FlatButton label="Open" /></CardActions>
                     </Card>
                     <Card>
-                        <CardHeader title="Created By" subtitle = "Diogo Leite" avatar={avatar} />
+                        <CardHeader title="Created By" subtitle="Diogo Leite" avatar={avatar} />
                         <CardTitle title="Card title" subtitle="Card subtitle" />
                         <CardText>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit.

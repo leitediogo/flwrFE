@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
 import DecisionList from './components/DecisionList'
 import MaterialUITest from './components/MaterialUITest'
 import DecisionCardList from './components/DecisionCardList'
 import DecisionAppBar from './components/DecisionAppBar'
+import FetchTest from './components/FetchTest'
 
 // Needed for onTouchTap
 import injectTapEventPlugin from 'react-tap-event-plugin';
@@ -17,6 +18,7 @@ class App extends Component {
     return (
       <div className="App">
         <div><DecisionList/></div>
+        <div><FetchTest/></div>
         <DecisionAppBar/>
         <div style={divstyle}><DecisionCardList/></div>
         <div style={divstyle}><MaterialUITest/></div>           
