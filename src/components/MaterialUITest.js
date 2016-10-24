@@ -48,7 +48,6 @@ class MaterialUITest extends Component {
         return (
             <MuiThemeProvider>
                 <div>
-                    <AppBar title="DecisionAppBar1" />
                     <AppBar title="DecisionAppBar2"
                         iconElementLeft={<IconButton><NavigationClose /></IconButton>}
                         iconElementRight={<FlatButton label="testBut" />} />

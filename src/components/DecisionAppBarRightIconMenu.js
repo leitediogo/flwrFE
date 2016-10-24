@@ -5,7 +5,7 @@ import MenuItem from 'material-ui/MenuItem';
 import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
 import IconButton from 'material-ui/IconButton'
 
-class DecisionAppBarLeftIconMenu extends Component {
+class DecisionAppBarRightIconMenu extends Component {
     constructor() {
         super()
         this.state = { decision: '', decisionList: [] }
@@ -14,12 +14,10 @@ class DecisionAppBarLeftIconMenu extends Component {
         return (
             <MuiThemeProvider>
                     <IconMenu
-                        iconButtonElement={<IconButton><MoreVertIcon /></IconButton>}
+                        iconButtonElement={<IconButton><MoreVertIcon color='white' /></IconButton>}
                         anchorOrigin={{ horizontal: 'right', vertical: 'top' }}
                         targetOrigin={{ horizontal: 'right', vertical: 'top' }}
                         >
-                        <MenuItem primaryText="Refresh" />
-                        <MenuItem primaryText="Send feedback" />
                         <MenuItem primaryText="Settings" />
                         <MenuItem primaryText="Help" />
                         <MenuItem primaryText="Sign out" />
@@ -29,4 +27,4 @@ class DecisionAppBarLeftIconMenu extends Component {
     }
 
 }
-export default DecisionAppBarLeftIconMenu
+export default DecisionAppBarRightIconMenu

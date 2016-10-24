@@ -1,65 +1,38 @@
 import React from 'react'
 import { Component } from 'react'
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import { Card, CardActions, CardHeader, CardTitle, CardText } from 'material-ui/Card';
-import FlatButton from 'material-ui/FlatButton';
-
-//import tiger from '../images/tiger.jpg';
+import agent from 'superagent'
+import DecisionCard from './DecisionCard'
 import avatar from '../images/avatar.jpg'
+
+
+let divstyle = { margin: 60 }
 
 class DecisionCardList extends Component {
     constructor() {
         super()
-        this.state = { decision: '', decisionList: [] }
+        this.state = { decisionsBody: [] }
     }
+
+    componentDidMount() {
+        agent.get('http://localhost:3000/api/Decisions')
+            .then(function (res) {
+                this.setState({ decisionsBody: res.body });
+            }.bind(this));
+    }
+
     render() {
-        return (
-            <MuiThemeProvider>    
-                <div>
-                    <Card>
-                        <CardHeader title="Created By" subtitle="Diogo Leite" avatar={avatar} />
-                        <CardTitle title="Decision One" subtitle="Decision One Subtitle" />
-                        <CardText>Decision One detailed text for visual purposes</CardText>
-                        <CardActions> <FlatButton label="Edit" /><FlatButton label="Open" /></CardActions>
-                    </Card>
-                    <Card>
-                        <CardHeader title="Created By" subtitle="Diogo Leite" avatar={avatar} />
-                        <CardTitle title="Card title" subtitle="Card subtitle" />
-                        <CardText>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Donec mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.
-      Donec vulputate interdum sollicitudin. Nunc lacinia auctor quam sed pellentesque.
-      Aliquam dui mauris, mattis quis lacus id, pellentesque lobortis odio.
-    </CardText>
-                        <CardActions>
-                            <FlatButton label="Open" />
-                            <FlatButton label="Edit" />
-                        </CardActions>
-                    </Card>
-                    <Card>
-                        <CardHeader
-                            title="Diogo Leite"
-                            subtitle="Decision Card Subtitle"
-                            avatar={avatar}
-                            />
-                        <CardTitle title="Card title" subtitle="Card subtitle" />
-                        <CardText>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Donec mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.
-      Donec vulputate interdum sollicitudin. Nunc lacinia auctor quam sed pellentesque.
-      Aliquam dui mauris, mattis quis lacus id, pellentesque lobortis odio.
-    </CardText>
-                        <CardActions>
-                            <FlatButton label="Open" />
-                            <FlatButton label="Edit" />
-                        </CardActions>
-                    </Card>
-                </div>
-            </MuiThemeProvider>
-
-        )
+        let cards = [];
+        for (var i = 0; i < this.state.decisionsBody.length; i++) {
+            cards.push(<DecisionCard
+                title={this.state.decisionsBody[i].name} 
+                subTitle={this.state.decisionsBody[i].description}
+                createdBy={this.state.decisionsBody[i].createdById}
+                avatar={avatar}
+                cardText={this.state.decisionsBody[i].description}
+                key={i} />);
+        }
+        return <div style={divstyle}>{cards}</div>
     }
-
 }
 
 export default DecisionCardList

@@ -1,0 +1,59 @@
+{
+    "req": {
+        "method": "GET",
+        "url": "http://localhost:3000/api/Decisions",
+        "headers": {}
+    },
+    "xhr": {},
+    "text": "[{\"id\":1,\"name\":\"decision One\",\"description\":\"decision One description\",\"status\":\"Initiated\",\"createdById\":1,\"ownerId\":1,\"categoryId\":1,\"dueDt\":\"2016-09-26T00:00:00.000Z\",\"creationDt\":\"2016-09-26T12:19:07.000Z\",\"lastUpdateDt\":\"2016-09-26T12:19:07.000Z\"},{\"id\":2,\"name\":\"decision Two\",\"description\":\"decision Two description\",\"status\":\"Initiated\",\"createdById\":1,\"ownerId\":1,\"categoryId\":1,\"dueDt\":\"2016-10-11T00:00:00.000Z\",\"creationDt\":\"2016-10-11T15:06:57.000Z\",\"lastUpdateDt\":\"2016-10-11T15:06:57.000Z\"}]",
+    "statusText": "OK",
+    "statusCode": 200,
+    "status": 200,
+    "statusType": 2,
+    "info": false,
+    "ok": true,
+    "clientError": false,
+    "serverError": false,
+    "error": false,
+    "accepted": false,
+    "noContent": false,
+    "badRequest": false,
+    "unauthorized": false,
+    "notAcceptable": false,
+    "notFound": false,
+    "forbidden": false,
+    "headers": {
+        "content-type": "application/json; charset=utf-8"
+    },
+    "header": {
+        "content-type": "application/json; charset=utf-8"
+    },
+    "type": "application/json",
+    "charset": "utf-8",
+    "body": [
+        {
+            "id": 1,
+            "name": "decision One",
+            "description": "decision One description",
+            "status": "Initiated",
+            "createdById": 1,
+            "ownerId": 1,
+            "categoryId": 1,
+            "dueDt": "2016-09-26T00:00:00.000Z",
+            "creationDt": "2016-09-26T12:19:07.000Z",
+            "lastUpdateDt": "2016-09-26T12:19:07.000Z"
+        },
+        {
+            "id": 2,
+            "name": "decision Two",
+            "description": "decision Two description",
+            "status": "Initiated",
+            "createdById": 1,
+            "ownerId": 1,
+            "categoryId": 1,
+            "dueDt": "2016-10-11T00:00:00.000Z",
+            "creationDt": "2016-10-11T15:06:57.000Z",
+            "lastUpdateDt": "2016-10-11T15:06:57.000Z"
+        }
+    ]
+}
